@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+</head>
+<body>
+	
+	<div th:insert="Doctor_Navbar.html"></div>
+	
+	<hr>
+<h1>Welcome: [[${session.activeUser.fName}]]</h1>
+<h1>Welcome: [[${session.activeUser.lName}]]</h1>
+<h1>Welcome: [[${session.activeUser.userName}]]</h1>
+<h1>Welcome: [[${session.activeUser.lName}]]</h1>
+<h1>Welcome: [[${session.activeUser.email}]]</h1>
+
+
+<hr>
+
+
+</body>
+</html>

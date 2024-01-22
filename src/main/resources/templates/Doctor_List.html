@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Dcotor List</title>
+</head>
+
+<body>
+	<div th:insert="Navbar.html"></div>
+		<div class="container shadow">
+		<div class="row">
+			<div class="col text-center bg-primary fw-bold py-2 card text-light">
+				<h1> Doctors List</h1>
+			</div>
+		</div>
+		<table>
+			<tr class="bg-dark text-light">
+				<th>
+					Name
+				</th>
+				<th>
+					Specialization
+				</th>
+				<th>
+					Address
+				</th>
+				<th>
+					Mobile
+				</th>
+				<th>
+					Gender
+				</th>
+				<th>
+					note
+				</th>
+				<th>
+					Action
+				</th>
+			</tr>
+			<tr th:each="d:${dList}" class="p-5">
+				<td>[[${d.name}]]</td>
+				<td>[[${d.specialization.name}]]</td>
+				<td>[[${d.address}]]</td>
+				<td>[[${d.mobile}]]</td>
+				<td>[[${d.gender}]]</td>
+				<td>[[${d.note}]]</td>
+				<td>
+				<a th:href="@{/remove/doctor(id=${d.id})}">	<input type="button" value="Remove" class="btn btn-danger"></a>
+					</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

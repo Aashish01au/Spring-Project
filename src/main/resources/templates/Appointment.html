@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Appointment</title>
+
+</head>
+
+<body>
+	<div th:insert="Doctor_Navbar.html"></div>
+
+
+<div class="card-header text-center bg-primary text-light py-2 fw-1"><h1 class="text-uppercase">Appointment Form</h1></div>
+<div class="card-body">
+		<form action="appointment" method="post" >
+
+		<div class="container card shadow my-2">
+
+		<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				Doctor :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<select name="doctor" class="form-control">
+						
+						<option th:each="d : ${dList}" th:value="${d.id}">[[${d.name}]]</option>
+						
+					</select>
+					
+
+				</div>
+			
+			</div>
+						<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				Date :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="datetime-local" name="date" required> <br>
+					
+
+				</div>
+			
+			</div>
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				Time :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="time" name="time" required> <br>
+					
+
+				</div>
+			
+			</div>
+						
+						<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+					No. of Slots :
+
+				</div>
+
+				<div class="col-6 ">
+
+						<input class="form-control" type="number" name="noOfSlots" required> <br>
+					
+
+				</div>
+			
+			</div>
+						<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+					Details :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<textarea class="form-control" rows="3" cols="65" name="details" required ></textarea> <br>
+					
+
+				</div>
+			
+			</div>
+					<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				ConsultationFee :
+				</div>
+
+				<div class="col-6 ">
+
+					<input type="text" name="consultationFee" class="form-control"> 
+
+				</div>
+			</div>
+			
+		
+				<div class="row p-2">
+
+				<div class="col-4">
+
+				
+
+				</div>
+
+				<div class="col-6  text-uppercase  ">
+
+					<input type="submit" value="add" class="btn btn-success">
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</form>
+</div>
+
+<div class="card-footer bg-secondary text-center text-light py-2 fw-1">@copyRight2025</div>
+</body>
+
+</html>

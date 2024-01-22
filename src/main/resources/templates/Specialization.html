@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Specialization</title>
+
+</head>
+
+<body>
+	<div th:insert="Navbar.html"></div>
+
+	<form action="specialization" method="post">
+
+		<div class="container card shadow mt-2">
+
+			<div class="row">
+
+				<div class="col-4 text-uppercase fs-3">
+
+					Code :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="text" name="code" required> <br>
+
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-4 text-uppercase fs-3">
+
+				Name :
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="text" name="name" required> <br>
+
+				</div>
+			</div>
+			<div class="row">
+
+				<div class="col-4 text-uppercase fs-3">
+
+				Note :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<textarea rows="10" cols="60" name="note"></textarea>
+
+				</div>
+			</div>
+				<div class="row">
+
+				<div class="col-4">
+
+				
+
+				</div>
+
+				<div class="col-6  text-uppercase fs-3 ">
+
+					<input type="submit" value="Create">
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</form>
+
+
+</body>
+
+</html>

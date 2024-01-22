@@ -1,0 +1,972 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+h1{
+    font-family: 'Lora', serif;
+}
+/* ============= Header Start ================== */
+
+.nav{
+    position: fixed;
+    background-color: #efefef;
+    height: 80px;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+.logo{
+    color: #3cb815;
+    font-size: 2.5rem;
+    line-height: 80px;
+    padding: 0 40px;
+    font-weight: 700;
+    font-family: 'Lora', serif;
+}
+.logo span{
+    color: #f65005;
+}
+.nav ul{
+    float: right;
+    margin-right: 40px;
+}
+.nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 10px;
+    font-family: sans-serif;
+}
+.nav ul li a{
+    color: #444;
+    font-weight: 500;
+    font-size: 17px;
+    transition: .3s ease;
+}
+.nav ul li a:hover, .active{
+    color: #000 !important;
+}
+.nav ul li a .fa{
+    color: #3cb815;
+}
+.nav ul li a .fa:hover{
+    color: #000;
+}
+.checkbtn{
+    font-size: 25px;
+    color: #666;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    transition: all .3s;
+}
+#check{
+    display: none;
+}
+
+/* ============= Header End ================== */
+
+/* ============== Image Slider start ================ */
+
+.image-slider{
+    overflow-x: hidden;
+}
+.myslider{
+    margin-top: 62px;
+    cursor: pointer;
+}
+.captions{
+    position: absolute;
+    z-index: 1;
+    width: 55%;
+    height: auto;
+    top: 205px;
+    left: 80px;
+    font-weight: bold;
+}
+.captions h1{
+    justify-content: flex-start;
+    font-family: "Lora", serif;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #111;
+    line-height: 80px;
+}
+.captions p{
+    font-size: 17px;
+    padding-top: 10px;
+    font-weight: 300;
+    line-height: 26px;
+    color: #222;
+    font-family: sans-serif;
+}
+.captions .button{
+    position: absolute;
+    padding-top: 40px;
+    display: block;
+}
+.captions .btn-1{
+    width: 160px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    margin-right: 12px;
+    background: #3cb815;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.button .btn-1:hover{
+    opacity: .9;
+}
+.captions .btn-2{
+    width: 160px;
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    margin-right: 12px;
+    background: #f65005;
+    border-radius: 50px;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.button .btn-2:hover{
+    opacity: .9;
+}
+
+/* ============== Image Slider End ================ */
+
+/* ============== About Section Start ================ */
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 120px;
+}
+.col1{
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    padding-top: 120px;
+}
+.col1 img{
+    width: 75%;
+    margin-left: 30px;
+}
+.about{
+    display: block;
+    padding-right: 38px;
+    justify-content: left;
+}
+.about h1{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.about p{
+    display: block;
+    font-size: 17px;
+    line-height: 24px;
+    padding-top: 20px;
+    font-family: sans-serif;
+    color: #444;
+}
+.main-content .button .btn-1{
+    margin: 0;
+    width: 150px;
+    font-size: 17px;
+    font-weight: 300;
+    font-family: sans-serif;
+    background: #3cb815;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 35px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.main-content .btn-1:hover{
+    opacity: .9;
+}
+.read_more{
+    margin-top: 35px;
+}
+
+/* ============== About Section End ================ */
+
+/* ============== Features Section Start ================= */
+
+.features{
+    background-color: #f7f8fc;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-bottom: 100px;
+    height: auto;
+}
+.h-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 70px;
+    padding-bottom: 25px;
+}
+.header{
+    max-width: 500px;
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+.container-inner{
+    width: 86%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+}
+.box{
+    text-align: center;
+    height: auto;
+    background: #fff;
+    position: relative;
+}
+.b-content{
+    padding: 50px;
+}
+.b-content img, h2, p{
+    margin-bottom: 1.5rem;
+}
+.b-content p{
+    line-height: 1.5rem;
+    font-size: 17px;
+    color: #555;
+    font-family: sans-serif;
+}
+.header h1{
+    font-size: 3rem;
+}
+.header p{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #555;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 15px;
+}
+.r-more{
+    padding: 0.7rem 1.5rem 0.7rem 1.5rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 400;
+    background-color: #fff;
+    border: 2px solid #3cb815;
+    color: #3cb815;
+    cursor: pointer;
+    transition: all .5s;
+}
+.r-more:hover{
+    background-color: #3cb815;
+    color: #fff;
+}
+/* ============== Features Section End ================= */
+
+/* ============= Product Section Start ================= */
+.products{
+    padding-bottom: 100px;
+}
+.p-content img{
+    width: 100%;
+}
+.pbox{
+    background-color: #f7f8fc;
+}
+.p-header h1{
+    font-size: 3rem;
+}
+.p-header p{
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #555;
+    font-weight: 400;
+    line-height: 24px;
+}
+.p-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    padding-bottom: 25px;
+}
+.products .p-header{
+    max-width: 500px;
+    text-align: center;
+}
+.p-content{
+    padding: 0px;
+}
+.p-content h2{
+    font-size: 1.25rem;
+    padding-top: 20px;
+}
+.p-content p{
+    color: #3cb815;
+    font-size: 17px;
+    font-family: sans-serif;
+    margin-top: -12px;
+}
+.p-content span{
+    color: #333;
+    margin-left: 4px;
+    text-decoration: line-through;
+}
+.p-content .p-btn{
+    padding: 10px;
+    margin: 5px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #444;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: 1px solid #a3f38a;
+    cursor: pointer;
+    background-color: #fff;
+    transition: all .5s;
+}
+.p-content .p-btn .fa{
+    font-size: 16px;
+    color: #3cb815;
+    padding-right: 5px;
+}
+.new{
+    background: #f65005;
+    width: 65px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-family: sans-serif;
+    position: absolute;
+    top: 6%;
+    left: 9%;
+}
+.p-btn:hover{
+    background-color: #3cb815;
+    color: #fff;
+}
+.p-content .p-btn:hover .fa{
+    color: #fff;
+}
+.p-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 32px;
+}
+.p-button .btn{
+    padding: 1.2rem 3rem 1.2rem 3rem;
+    border-radius: 50rem;
+    border: none;
+    background: #3cb815;
+    color: #fff;
+    font-size: 17px;
+    cursor: pointer;
+    transition: all .5s;
+}
+.p-button .btn:hover{
+    background: #f65005;
+}
+/* ============= Product Section End ================= */
+
+/* ============= Call to action start ================= */
+
+.call-to-action{
+    background-color: #3cb815;
+    height: auto;
+    background-position: center;
+    background-size: contain;
+}
+.call-to-action .container{
+    min-height: 340px
+
+}
+.call-to-action .container-inner{
+    width: 80%;
+}
+.call-to-action .box{
+    text-align: left;
+    background-color: transparent;
+    border: none;
+}
+.visit{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.call-to-action .box h1{
+    font-size: 3rem;
+    color: #fff;
+    font-family: 'lora', serif;
+    margin-bottom: 20px;
+}
+.call-to-action .box p{
+    font-size: 17px;
+    font-family: sans-serif;
+    color: #fff;
+    line-height: 24px;
+}
+.call-to-action .box .action-btn{
+    padding: 1.2rem 3rem 1.2rem 3rem;
+    border-radius: 50rem;
+    background: #f65005;
+    float: right;
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 18px;
+    border: none;
+}
+
+/* ============= Call to action End ================= */
+
+/* ============= Testimonial Section Start ================= */
+
+.testimonial{
+    background-color: #f7f8fc;
+    background-size: contain;
+    background-position: center;
+    padding-bottom: 85px;
+}
+.testimonial .p-container{
+    padding-bottom: 0px;
+}
+.testimonial .p-header{
+    margin-bottom: -35px;
+    max-width: 500px;
+    text-align: center;
+}
+.box .item-content p{
+    font-size: 17px;
+    font-family: sans-serif;
+    color: #555
+}
+.box .item-content{
+    padding: 50px;
+    text-align: left;
+}
+.photo{
+    display: flex;
+    width: 100%;
+}
+.photo img{
+    border-radius: 50%;
+}
+.photo-content{
+    width: 100%;
+    display: inline-block;
+    margin-left: 18px;
+    position: relative;
+    top: 4px;
+}
+.box .photo-content h2{
+    font-family: 'lora', serif;
+    font-size: 20px;
+    position: relative;
+    top: 7px;
+}
+.photo-content span{
+    font-family: sans-serif;
+    color: #555;
+    font-size: 17px;
+    margin-top: 0px;
+    position: relative;
+    top: -12px;
+}
+.fa-quote-left{
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    color: #3cb815;
+}
+.btns{
+    display: table;
+    margin: 0px auto;
+    margin-top: -25px;
+}
+.customNextBtn, .customPreviousBtn{
+    float: right;
+    color: #232323;
+    border: 1px solid #3cb815;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-left: 12px;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.customNextBtn:hover, .customPreviousBtn:hover{
+    background: #3cb815;
+    color: #fff;
+    border: 1px solid #3cb815;
+}
+
+/* ============= Testimonial Section End ================= */
+
+/* ============= Blog Section Start ================= */
+
+.blog{
+    padding-bottom: 100px;
+}
+.blog .box{
+    background-color: #f7f8fc;
+    border: none;
+    padding-bottom: 25px;
+}
+.blog .p-content h2{
+    font-family: 'Lora', serif;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    font-weight: 600;
+    padding-bottom: 5px;
+}
+.blog .p-header{
+    max-width: 500px;
+    text-align: center;
+}
+.blog h2 a{
+    color: #333;
+
+}
+.blog h2 a:hover{
+    color: #3cb815;
+}
+.blog .muted{
+    text-align: center;
+    width: 88%;
+    margin: 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid #dee2e6;
+}
+.blog .box .muted span{
+    color: #6c757d;
+    font-size: 0.90rem;
+    font-family: sans-serif !important;
+    text-decoration: none;
+    padding-right: 20px;
+}
+.blog .box .muted .fa{
+    color: #3cb815;
+}
+.p-header p{
+    margin-top: 15px;
+}
+
+/* ============= Blog Section End ================= */
+
+/* ============= Footer Start ================== */
+
+.footer{
+    background-position: center;
+    background-size: cover;
+    background-color: #111;
+    padding-bottom: 50px;
+}
+.footer .box{
+    background: #111;
+    text-align: left;
+}
+.footer .container-inner{
+    border-bottom: 1px solid #222;
+    padding-bottom: 30px;
+    margin-top: 40px;
+}
+.footer .container{
+    margin-top: 40px;
+}
+.footer .box .logo{
+    padding: 0;
+    position: relative;
+    top: -22px;
+}
+.footer .box p{
+    padding-right: 40px;
+    font-size: 1rem;
+    font-family: sans-serif;
+    color: #999999;
+    line-height: 26px;
+}
+.footer .box h1{
+    font-family: 'Lora';
+    color: #fff;
+}
+.address{
+    color: #999;
+    font-size: 1rem;
+    padding-top: 30px;
+    font-family: sans-serif;
+    line-height: 35px;
+}
+.footer .address .fa{
+    padding-right: 10px;
+}
+.footer .links{
+    padding-top: 35px;
+    display: grid;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+.footer .links a{
+    color: #999;
+    line-height: 28px;
+    transition: .3s ease;
+}
+.footer .links p{
+    line-height: 0px;
+}
+.links .fa{
+    font-size: 0.78rem;
+    position: relative;
+    top: -2px;
+    right: 3px;
+}
+.footer .links a:hover{
+    color: #3cb815;
+}
+.footer .follow{
+    padding-top: 40px;
+}
+.footer .follow .fa{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 5px;
+    font-size: 18px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid #999;
+    color: #fff;
+    transition: .5s ease;
+    cursor: pointer !important;
+}
+.follow .fa:hover{
+    background-color: #3cb815;
+    border: 1px solid #3cb815;
+    color: #111;
+}
+.follow .signup{
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    margin-top: 40px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+    background: #3cb815;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s ease;
+}
+.signup:hover{
+    background-color: #f65005;
+}
+.footer .follow .signup .fa{
+    border: none;
+    margin-right: -7px;
+    font-size: 0.87rem;
+    background: none;
+    color: #fff;
+
+}
+.copyright{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.copyright a{
+    color: #fff;
+    font-family: sans-serif;
+}
+.copyright span{
+    color: #999;
+    font-size: 15px;
+}
+
+/* ======#======= Footer End ========#========== */
+
+
+
+
+
+/* ============= Responsive Code Start =================== */
+
+@media (max-width: 980px){
+    .captions{
+        width: 60%;
+    }
+    label .logo{
+        font-size: 2.3rem;
+    }
+    .nav ul li a{
+        font-size: 16px;
+    }
+    .captions h1{
+        font-size: 4.3em;
+        line-height: 75px;
+    }
+    .col1{
+        float: none;
+        width: 100%;
+    }
+    .col1 img{
+        width: 84%;
+        margin-left: 0px !important;
+    }
+    .about{
+        padding-left: 70px;
+        margin-top: -40px;
+    }
+    .call-to-action .box h1{
+        font-size: 2.7rem;
+    }
+}
+
+@media (max-width: 820px){
+    .captions h1{
+        font-size: 4em !important;
+
+    }
+    .captions{
+        top: 185px
+    }
+    .call-to-action{
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 780px){
+    .captions h1{
+        font-size: 3.5em !important;
+        line-height: 60px;
+        top: 185px;
+    }
+    .captions{
+        top: 170px;
+        width: 64%;
+    }
+    .captions P{
+        display: none;
+    }
+    .main-content{
+        padding-bottom: 70px;
+    }
+    h1{
+        top: -100px;
+        font-size: 1.3rem;
+    }
+    .about{
+        padding-left: 50px;
+    }
+    .checkbtn{
+        display: block;
+    }
+    .nav ul{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        background: inherit;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .nav ul li{
+        display: block;
+        line-height: 50px;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+    .nav ul li a .fa{
+        display: none;
+    }
+    .nav ul li a:hover{
+        padding: 10px 20px 10px 20px;
+        background: #3cb815;
+        border-radius: 5px;
+        color: #fff !important;
+    }
+    .nav ul li a{
+        font-size: 20px;
+    }
+    .nav ul {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        border-top: 2px solid rgba(224, 224, 224);
+    }
+    .call-to-action .container-inner{
+        width: 86%;
+    }
+    .header h1, .p-header h1{
+        font-size: 2.8rem;
+    }
+}
+@media (max-width: 620px){
+    .captions{
+        top: 140px;
+        left: 50px;
+        width: 70%;
+    }
+    .captions h1{
+        font-size: 2.7em !important;
+        line-height: 50px;
+    }
+    .caaptions .button{
+        position: absolute;
+        padding-top: 20px;
+        display: block;
+    }
+    .button .btn-2{
+        width: 100px;
+        font-size: .9rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+    }
+    .button .btn-1{
+        width: 100px;
+        font-size: .9rem;
+        padding-top: .6rem;
+        padding-bottom: .6rem;
+    }
+    .main-content .btn-1{
+        width: 130px !important;
+        padding-top: .8rem;
+        padding-bottom: .8rem;
+    }
+    .about h1{
+        font-size: 2.5rem;
+    }
+    .header h1, .p-header h1, .call-to-action .box h1{
+        font-size: 2.6rem;
+    }
+}
+
+@media (max-width: 540px){
+    label.logo{
+        font-size: 2.3rem;
+        padding-left: 20px;
+    }
+    .captions{
+        top: 120px;
+        left: 40px;
+    }
+    .captions h1{
+        font-size: 2.5em !important;
+        line-height: 40px;
+    }
+    .about{
+        padding-left: 40px;
+    }
+    .about h1{
+        font-size: 2.2rem;
+    }
+    .header h1, .p-header h1, .call-to-action .box h1{
+        font-size: 2.5rem;
+    }
+    .box .action-btn{
+        padding: .9rem 1.9rem .9rem 1.9rem;
+    }
+}
+@media (max-width: 420px){
+    label.logo{
+        font-size: 2rem;
+        padding-left: 20px;
+    }
+    .checkbtn{
+        margin-right: 20px;
+    }
+    .captions{
+        top: 120px;
+        left: 20px;
+        width: 78%;
+    }
+    .captions h1{
+        font-size: 2em !important;
+        line-height: 35px;
+    }
+    .captions .button{
+        padding-top: 20px;
+    }
+    .box .item-content p{
+        font-size: 15px;
+    }
+    .fa-quote-left{
+        font-size: 1.3em !important;
+        top: 22px;
+        left: 22px;
+    }
+    .col1 img{
+        width: 92%;
+    }
+    .photo-content h2{
+        font-size: 17px;
+    }
+    .photo-content span{
+        font-size: 14px;
+    }
+    .about{
+        font-size: 1.8rem;
+    }
+    .header h1, .p-header h1, .call-to-action .box h1{
+        font-size: 2.3rem !important;
+    }
+}
+@media (max-width: 320px){
+    .captions{
+        top: 110px;
+        left: 20px;
+        width: 78%;
+    }
+    .captions h1{
+        font-size: 1.6em !important;
+        line-height: 30px;
+    }
+    .captions .button{
+        padding-top: 10px;
+    }
+    .photo-content h2{
+        font-size: 15px;
+    }
+    .header h1, .p-header h1, .call-to-action .box h1{
+        font-size: 1.8rem !important;
+    }
+}
+@media (max-width: 1250px){
+    .copyright{
+        padding-top: 40px;
+    }
+}
+
+/* ============= Responsive Code End =================== */

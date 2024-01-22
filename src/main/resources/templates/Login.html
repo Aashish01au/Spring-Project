@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Login</title>
+ <!-- Latest compiled and minified CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+<body>
+
+<div class="container text-center mt-5">
+	<h1>Login Pages</h1>
+	<div class="row">
+		<div class="col d-flex justify-content-center ">
+			<form action="/login" method="post">
+	<p style="color: red;">[[${message}]]</p>
+	email  <input type="email" name="email" required> <br>
+	Password <input type="password" name="password" required><br>
+	<div class="g-recaptcha" data-sitekey="6Lcxyj4pAAAAAMWgd8D4JEUo3aHWMzTHBoTnnoia"></div>
+	<!--6Lcxyj4pAAAAAAD97gk375UYQodjgOf3dLrP-I5s-->
+	<input type="submit" value="Login" class="btn btn-primary">
+	
+</form>
+
+		</div>
+		<a href="signup"><input type="submit" value="Signup"class="btn btn-secondary"></a>
+	</div>
+	
+</div>
+
+
+</body>
+</html>

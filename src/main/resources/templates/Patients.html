@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Patients</title>
+
+</head>
+
+<body>
+	<div th:insert="Patient_Navbar.html"></div>
+
+
+<div class="card-header text-center bg-primary text-light py-2 fw-1"><h1 class="text-uppercase">Patients Form</h1></div>
+<div class="card-body">
+		<form action="/patients" method="post">
+
+		<div class="container card shadow my-2">
+
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+					Name :
+
+
+				</div>
+
+				<div class="col-3 ">
+
+					<input class="form-control" type="text" name="fName" required placeholder="First Name"> <br>
+					
+
+				</div>
+				<div class="col-3 ">
+
+					
+					<input class="form-control" type="text" name="lName" required  placeholder="Last Name"> <br>
+
+				</div>
+			</div>
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				Gender :
+				</div>
+
+				<div class="col-6 ">
+
+					<input type="radio" name="gender" value="Male"> Male 
+					<input type="radio" name="gender" value="female"> female 
+
+				</div>
+			</div>
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+			Phone :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control"  type="text" name="phone" >  <br>
+
+				</div>
+			</div>
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+							DOB :
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control"  type="date" name="dob" >  <br>
+
+				</div>
+			</div>
+				<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				MAterial Status :
+				</div>
+
+				<div class="col-6 ">
+
+					<input type="radio" name="materialStatus" value="Married"> Married 
+					<input type="radio" name="materialStatus" value="Unmarried"> Unmarried 
+					<input type="radio" name="materialStatus" value="Divorsed"> Divorsed 
+					<input type="radio" name="materialStatus" value="LegallySeparated"> Legally Separated 
+				</div>
+			</div>
+				<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+					Present Address :
+				</div>
+
+				<div class="col-6 ">
+
+					<textarea rows="3" cols="65" name="presentAddress" > </textarea> <br>
+
+				</div>
+			</div>
+				<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+					Communication Address :
+				</div>
+
+				<div class="col-6 ">
+
+					<textarea rows="2" cols="65" name="communicationAddress" ></textarea>  <br>
+
+				</div>
+			</div>
+			
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				past Medical History :
+				</div>
+
+				<div class="col-6 ">
+
+					<input type="checkbox" name="pastMedicalHistory" value="Anemina"> Anemina 
+					<input type="checkbox" name="pastMedicalHistory" value="Asthama"> Asthama 
+					<input type="checkbox" name="pastMedicalHistory" value="Diabetes"> Diabetes
+					<input type="checkbox" name="pastMedicalHistory" value="Cancer">Cancer 
+					<input type="checkbox" name="pastMedicalHistory" value="Ulcer"> Ulcer 
+					<input type="checkbox" name="pastMedicalHistory" value="ChickenPox"> ChickenPox 
+					<input type="checkbox" value="other">other<input type="text"name="pastMedicalHistory"  >
+				</div>
+			</div>
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+					Email
+				</div>
+
+				<div class="col-6 ">
+
+						<input class="form-control"  type="email" name="email" >  
+
+
+				</div>
+			</div>
+			
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+					Password
+				</div>
+
+				<div class="col-6 ">
+
+						<input class="form-control"  type="password" name="password" >  
+
+
+				</div>
+			</div>
+			
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+					Other Details :
+				</div>
+
+				<div class="col-6 ">
+
+					<textarea rows="5" cols="65"  name="otherDetails" > </textarea> <br>
+
+				</div>
+			</div>
+				<div class="row p-2">
+
+				<div class="col-4">
+
+				
+
+				</div>
+
+				<div class="col-6  text-uppercase  " >
+
+				 <input type="submit" value="Register" class="btn btn-success"> 
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</form>
+</div>
+
+<div class="card-footer bg-secondary text-center text-light py-2 fw-1">@copyRight2025</div>
+</body>
+
+</html>

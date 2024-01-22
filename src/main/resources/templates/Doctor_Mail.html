@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Doctor Contact</title>
+</head>
+<body>
+	
+	<div th:insert="Patient_Navbar.html"></div>
+<div class="container">
+
+	<div class="card-header fw-bold text-center fs-3 bg-primary text-light"> Contacts Form</div>
+		<div class="card-body text-center">
+				<form action="doctor_mail" method="post">
+	<div class="row py-2">
+		<div class="col-2">
+			Mail To:
+		</div>
+		<div class="col-4">
+	<input type="email" name="toEmail" class="form-control" required>
+		</div>
+	</div>
+	<div class="row py-2">
+		<div class="col-2">
+			Subject :
+		</div>
+		<div class="col-4">
+		<input type="text" name="subject" class="form-control" required> 
+		</div>
+	</div>
+	<div class="row py-2">
+		<div class="col-2">
+			Message :
+		</div>
+		<div class="col-4">
+		<textarea rows="5" cols="30" name="message" required></textarea>
+		</div>
+	</div>
+	<div class="row py-2">
+		<div class="col-2">
+			
+		</div>
+		<div class="col-4">
+		<input type="submit" value="Send" class="btn btn-success">
+		</div>
+	</div>
+	</form>
+	</div>
+	<div class="card-footer fw-bold text-center  bg-dark text-light"> copyRight @2024</div>
+	
+</div>
+
+</body>
+</html>

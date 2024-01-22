@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home</title>
+
+
+</head>
+<body>
+	
+	<div th:insert="Navbar.html"></div>
+	
+	<hr>
+<h1>Welcome: [[${session.activeUser.userName}]]</h1>
+<img th:src="@{/static/img/102.jpg}" class="w-100">
+
+<hr>
+    <section class="image-slider">
+            <div class="captions">
+                <h1 class="wow animate__animated animate__fadeInUp" data-wow-delay=".3s">Give a Hoot! Eat More Fruit</h1>
+                <p class="wow animate__animated animate__fadeInUp" data-wow-delay=".8s">A pearl of health hidden in a fruit. A jewel of health, <br>
+                hidden in a vegetable. Eat fruit to be cute.</p>
+                <div class="button wow animate__animated animate__fadeInUp" data-wow-delay="1s">
+                    <button type="button" class="btn-1">Products</button>
+                    <button type="button" class="btn-2">Services</button>
+                </div>
+            </div>
+            
+            <div class="myslider" th:each="img:${imgList}">
+                <img th:src="@{'src/main/resources/static/hospital/'+${img}}" class="w-100">
+                
+            </div>
+        </section>
+
+</body>
+</html>

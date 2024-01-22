@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Doctor Profile</title>
+
+</head>
+
+<body>
+	<div th:insert="Doctor_Navbar.html"></div>
+<div class="card-header text-center bg-primary text-light py-2 fw-1"><h1 class="text-uppercase">Doctor Profile</h1></div>
+<div class="card-body">
+	<div class="container">
+		<div class="row" >
+		<h1>Welcome: [[${session.activeUser.fName}]]</h1>
+<h1>Welcome: [[${session.activeUser.lName}]]</h1>
+<h1>Welcome: [[${session.activeUser.userName}]]</h1>
+
+<h1>Welcome: [[${session.activeUser.email}]]</h1>
+		</div>
+	</div>
+	<p class="fs-1 fw-bold text-danger text-uppercase text-center">[[${message}]]</p>
+	
+</div>
+
+<div class="card-footer bg-secondary text-center text-light py-2 fw-1">@copyRight2025</div>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Doctor</title>
+
+</head>
+
+<body>
+	<div th:insert="Doctor_Navbar.html"></div>
+
+
+<div class="card-header text-center bg-primary text-light py-2 fw-1"><h1 class="text-uppercase">Doctor Form</h1></div>
+<div class="card-body">
+		<form action="doctor" method="post" enctype="multipart/form-data">
+
+		<div class="container card shadow my-2">
+
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+					Name :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="text" name="name" required placeholder=" Name"> <br>
+					
+
+				</div>
+			
+			</div>
+						<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+					Email :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="email" name="email" required placeholder="123abc@gmail.com"> <br>
+					
+
+				</div>
+			
+			</div>
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+					Password :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="password" name="password" required placeholder="12sfcds124"> <br>
+					
+
+				</div>
+			
+			</div>
+						<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				Specialization :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<select name="specialization" class="form-control">
+						
+						<option th:each="s : ${sList}" th:value="${s.id}">[[${s.name}]]</option>
+						
+					</select>
+					
+
+				</div>
+			
+			</div>
+						<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+					Address :
+
+				</div>
+
+				<div class="col-6 ">
+
+					<textarea rows="3" cols="65" name="address"></textarea>
+					
+
+				</div>
+			
+			</div>
+						<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+					Mobile :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control" type="text" name="mobile" required placeholder=" 5645645"> <br>
+					
+
+				</div>
+			
+			</div>
+					<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+				Gender :
+				</div>
+
+				<div class="col-6 ">
+
+					<input type="radio" name="gender" value="Male"> Male 
+					<input type="radio" name="gender" value="female"> female 
+
+				</div>
+			</div>
+				<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+					Note :
+
+				</div>
+
+				<div class="col-6 ">
+
+					<textarea rows="3" cols="65" name="note"></textarea>
+					
+
+				</div>
+			
+			</div>
+			
+	
+			<div class="row p-2">
+
+				<div class="col-4 text-uppercase ">
+
+			Photo :
+
+
+				</div>
+
+				<div class="col-6 ">
+
+					<input class="form-control"  type="file" name="images" >  <br>
+
+				</div>
+			</div>
+	
+			
+			
+			
+			
+		
+		
+				<div class="row p-2">
+
+				<div class="col-4">
+
+				
+
+				</div>
+
+				<div class="col-6  text-uppercase  ">
+
+					<input type="submit" value="Create" class="btn btn-success">
+
+				</div>
+			</div>
+
+
+		</div>
+
+	</form>
+	<p class="fs-1 fw-bold text-danger text-uppercase text-center">[[${message}]]</p>
+	
+</div>
+
+<div class="card-footer bg-secondary text-center text-light py-2 fw-1">@copyRight2025</div>
+</body>
+
+</html>

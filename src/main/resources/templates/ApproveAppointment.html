@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Approve Appointment</title>
+</head>
+
+<body>
+	<div th:insert="Navbar.html"></div>
+	<form>
+		<div class="container shadow">
+		<div class="row">
+			<div class="col text-center bg-primary fw-bold py-2 card text-light">
+				<h1> Approve Appointment Form</h1>
+			</div>
+		</div>
+		<div class="row fw-bold  card  ">
+			
+			
+				
+			
+			<table>
+				<tr class=" bg-dark text-light p-3">
+					<td>
+						Patients
+					</td>
+					<td>
+						Doctor
+					</td>
+					<td>
+						Status
+					</td>
+
+				</tr>
+				
+				<tr th:each="b:${bList}">
+					<td>[[${b.patient.fName}]]</td>
+					<td>[[${b.doctor.name}]]</td>
+					<td>
+				<a th:href="@{/accept/approveAppointment(id=${b.id})}"><input type="submit" value="accept" class="btn btn-success"> </a>
+					<a th:href="@{/reject/appAppointment(id=${b.id})}"><input type="button" value="reject" class="btn btn-danger"></a>
+					</td>
+					
+				</tr>
+				
+				
+				
+				
+			</table>
+		</div>
+	</div>
+
+	<p>[[${message}]]</p>
+</body>
+
+</html>
